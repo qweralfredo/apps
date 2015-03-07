@@ -68,6 +68,10 @@
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
+	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+		<param name="APP_ID" value="802540193201587" />
+		<param name="APP_NAME" value="APPS" />
+	</gap:plugin>
 	<resources>
 		<string name="fb_app_id">802540193201587</string>
 		<string name="fb_app_name">APPS</string>
