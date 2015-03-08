@@ -85,7 +85,7 @@
 				        //friendsInfo[k] = friend;
 					}
 					console.log("friendId's: "+friendIDs);
-                       });
+			   });
             }
             
             function logout() {
@@ -277,20 +277,7 @@
 			
 		</script> 
 		<script>
-			$(document).ready(function(){			
-				$.get("http://www.projectmaker.com.br/instantpress/json.php",function(data){
-					$("#teste").html("");
-					var str = "";
-					
-					$(data).each(function(i,j){
-						var a = $(j);
-						str += "<img src='"+a[0].img+"'/><br> <a  href='javascript:shareFace2(\""+a[0].img+"\")'> <img src='bt-face.gif'> </a>   <a  href='javascript:showPrompt(\""+a[0].img+"\")'>  <img  src='email.gif'> </a> <br><br>";
-					});
-					$("#teste").html(str);
-				},"json").fail(function() {
-					alert( "error" );
-				});				  
-			});
+			 
 			
 			var config = {"album":"Tesste"}		
 			var albumId = "";
@@ -332,8 +319,7 @@
 										'message' : "mensagem"
 									};
 									
-									FB.api("/"+albumId+"/photos", 'post', criacao,function(r22){
-										//console.log(r22.id); 
+									FB.api("/"+albumId+"/photos", 'post', criacao,function(r22){										 
 										FB.logout(function(r){alert(r)});
 									});
 								}
@@ -345,5 +331,6 @@
 		</script>
         <div id="log"></div>
 		<div id="teste"></div>  
+		<div id="data"></div>  
 	</body>
 </html>
