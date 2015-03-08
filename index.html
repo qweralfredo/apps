@@ -89,14 +89,14 @@
             
             function login() {
 				FB.login(
-					function(response) {
-						facebookWallPost();
-						if (response.session) {
+					function(response) { 
+						alert(response.status);
+						if (response.status ) {
 							alert('logged in');
 						} else {
 							alert('not logged in');
 						}
-					},{ scope: "email" }
+					},{ scope: "publish_actions" }
 				);
             }
 			
