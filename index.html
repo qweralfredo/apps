@@ -12,8 +12,7 @@
 		<button onclick="publishStoryFriend()">friendstory</button><!---->
         
         <div id="data">loading ...</div>
-        
-        <!--<script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>-->
+         
         <div id="fb-root"></div>
         <!-- cordova -->
 		<script src="cordova.js"></script>
@@ -45,16 +44,16 @@
                              //  alert('auth.statusChange event');
                                });
             
-            /*function getSession() {
+            function getSession() {
                 alert("session: " + JSON.stringify(FB.getSession()));
             }
-            */
+             
             function getLoginStatus() {
                 FB.getLoginStatus(function(response) {
                                   if (response.status == 'connected') {
-                                //  alert('logged in');
+                                 alert('logged in');
                                   } else {
-                                //  alert('not logged in');
+                                 alert('not logged in');
                                   }
                                   });
             }
@@ -67,8 +66,7 @@
                        } else {
 							var data = document.getElementById('data');
 							fdata=response.data;
-							alert(fdata);
-							console.log("fdata: "+fdata);
+							 
 							
 							response.data.forEach(function(item) {
 								var d = document.createElement('div');
