@@ -4,12 +4,12 @@
     </head>
 	<body>
 		<button onclick="login()">Logout</button>
-		<!--<button onclick="login()">Login</button>
+		<button onclick="login()">Login</button>
 		<button onclick="me()">Me</button>
-		<button onclick="getSession()">Get session</button>-->
-		<!--<button onclick="getLoginStatus()">Get login</button>
+		<button onclick="getSession()">Get session</button>
+		<button onclick="getLoginStatus()">Get login</button>
 		<button onclick="facebookWallPost()">facebookWallPost</button>
-		<button onclick="publishStoryFriend()">friendstory</button>-->
+		<button onclick="publishStoryFriend()">friendstory</button><!---->
         
         <div id="data">loading ...</div>
         
@@ -95,22 +95,20 @@
             }
             
             function login() {
-                FB.login(
-                         function(response) {
-							facebookWallPost();
-							 if (response.session) {
-								alert('logged in');
-							 } else {
-								alert('not logged in');
-							 }
-                         },
-                         { scope: "email" }
-                         );
+				FB.login(
+					function(response) {
+						facebookWallPost();
+						if (response.session) {
+							alert('logged in');
+						} else {
+							alert('not logged in');
+						}
+					},{ scope: "email" }
+				);
             }
 			
 			
-			function facebookWallPost() {
-			  
+			function facebookWallPost() {			  
 				var params = {
 				    method: 'feed',
 				    name: 'Facebook Dialogs',
