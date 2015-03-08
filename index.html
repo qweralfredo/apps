@@ -67,7 +67,9 @@
                        } else {
 							var data = document.getElementById('data');
 							fdata=response.data;
+							alert(fdata);
 							console.log("fdata: "+fdata);
+							
 							response.data.forEach(function(item) {
 								var d = document.createElement('div');
 								//d.innerHTML = "<img src="+item.picture+"/>"+item.name;
