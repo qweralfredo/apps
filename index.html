@@ -55,7 +55,7 @@
 			var fdata;
             function me() {
                 FB.api('/me/friends', { fields: 'id, name, picture' },  function(response) {
-                         alert('resultado ' + response);
+                         alert('resultado ' + response.data);
 			   });
             }
             
